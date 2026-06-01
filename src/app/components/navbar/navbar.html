@@ -1,0 +1,36 @@
+<header
+  class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/20 shadow-sm transition-all duration-300"
+  id="top-nav">
+  <nav class="flex justify-between items-center px-gutter py-4 w-full max-w-container-max mx-auto">
+    <div class="flex items-center gap-2">
+      <span class="font-headline-md text-headline-md text-primary tracking-tight">The Gilded Petal</span>
+    </div>
+    <ul class="hidden md:flex gap-8 font-label-lg text-label-lg uppercase">
+      <li><a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Home</a></li>
+      <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#menu">Menu</a></li>
+      <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a></li>
+      <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#gallery">Gallery</a></li>
+      <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#location">Location</a></li>
+    </ul>
+    <div class="flex items-center gap-4">
+      <button
+        class="material-symbols-outlined text-primary p-2 hover:opacity-80 transition-opacity">shopping_bag</button>
+      <button
+        class="bg-primary text-on-primary px-6 py-2 rounded-full font-button text-button uppercase tracking-widest hover:opacity-90 transition-opacity hidden sm:block">Order
+        Now</button>
+      <button class="md:hidden material-symbols-outlined text-primary" onclick="toggleMobileNav()">menu</button>
+    </div>
+  </nav>
+</header>
+
+<!-- Mobile Navigation Overlay (Filtered View) -->
+<div
+  class="fixed inset-0 z-[60] bg-surface/95 backdrop-blur-2xl hidden flex-col p-8 items-center justify-center space-y-8 transition-all"
+  id="mobile-nav">
+  <button class="absolute top-8 right-8 material-symbols-outlined text-4xl text-primary"
+    onclick="toggleMobileNav()">close</button>
+  <a class="font-headline-md text-primary" href="#" onclick="toggleMobileNav()">Home</a>
+  <a class="font-headline-md text-on-surface-variant" href="#menu" onclick="toggleMobileNav()">Menu</a>
+  <a class="font-headline-md text-on-surface-variant" href="#about" onclick="toggleMobileNav()">About</a>
+  <a class="font-headline-md text-on-surface-variant" href="#location" onclick="toggleMobileNav()">Location</a>
+</div>
